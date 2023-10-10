@@ -1,0 +1,26 @@
++++
+title = 'MDX'
++++
+
+import { content } from './classes.js'
+
+export function Layout({ children }) {
+  return (
+    <main className={content}>
+      {children}
+    </main>
+  )
+}
+
+# Hello {props.name}
+
+<span>This is **bold** text</span>
+
+<label
+  hidden
+  id="input"
+>
+  <input id="input" />
+
+  This is **nested** MDX content
+</label>

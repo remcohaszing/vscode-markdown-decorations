@@ -1,0 +1,40 @@
+{
+  "version": "0.2.0",
+  "configurations": [
+    {
+      "name": "Launch Extension",
+      "type": "extensionHost",
+      "request": "launch",
+      "runtimeExecutable": "${execPath}",
+      "autoAttachChildProcesses": true,
+      "args": [
+        "--extensionDevelopmentPath=${workspaceFolder}",
+        "${workspaceFolder}/examples",
+        "${workspaceFolder}/examples/markdown.md",
+        "${workspaceFolder}/examples/mdx.mdx"
+      ],
+      "skipFiles": ["<node_internals>/**"],
+      "preLaunchTask": "build"
+    },
+    {
+      "name": "Launch Extension (Temp Profile)",
+      "type": "extensionHost",
+      "request": "launch",
+      "runtimeExecutable": "${execPath}",
+      "autoAttachChildProcesses": true,
+      "args": [
+        "--disable-updates",
+        "--disable-workspace-trust",
+        "--profile-temp",
+        "--skip-release-notes",
+        "--skip-welcome",
+        "--extensionDevelopmentPath=${workspaceFolder}",
+        "${workspaceFolder}/examples",
+        "${workspaceFolder}/examples/markdown.md",
+        "${workspaceFolder}/examples/mdx.mdx"
+      ],
+      "skipFiles": ["<node_internals>/**"],
+      "preLaunchTask": "build"
+    }
+  ]
+}
