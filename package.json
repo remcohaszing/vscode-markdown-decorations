@@ -1,7 +1,7 @@
 {
   "name": "markdown-decorations",
   "displayName": "Markdown WYSIWYG",
-  "version": "0.0.0",
+  "version": "0.1.0",
   "publisher": "remcohaszing",
   "description": "Provide a WYSIWYG-like experience for markdown and MDX files",
   "author": "Remco Haszing <remcohaszing@gmail.com>",
