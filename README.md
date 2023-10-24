@@ -1,10 +1,10 @@
 # Markdown WYSIWYG
 
-[![github actions](https://github.com/remcohaszing/vscode-markdown-wysiwyg/actions/workflows/ci.yaml/badge.svg)](https://github.com/remcohaszing/vscode-markdown-wysiwyg/actions/workflows/ci.yaml)
-[![Visual Studio Marketplace Version](https://img.shields.io/visual-studio-marketplace/v/remcohaszing.markdown-wysiwyg)](https://marketplace.visualstudio.com/items?itemName=remcohaszing.markdown-wysiwyg)
-[![Visual Studio Marketplace Downloads](https://img.shields.io/visual-studio-marketplace/d/remcohaszing.markdown-wysiwyg)](https://marketplace.visualstudio.com/items?itemName=remcohaszing.markdown-wysiwyg)
-[![Open VSX Version](https://img.shields.io/open-vsx/v/remcohaszing/markdown-wysiwyg)](https://open-vsx.org/extension/remcohaszing/markdown-wysiwyg)
-[![Open VSX Downloads](https://img.shields.io/open-vsx/dt/remcohaszing/markdown-wysiwyg)](https://open-vsx.org/extension/remcohaszing/markdown-wysiwyg)
+[![github actions](https://github.com/remcohaszing/vscode-markdown-decorations/actions/workflows/ci.yaml/badge.svg)](https://github.com/remcohaszing/vscode-markdown-decorations/actions/workflows/ci.yaml)
+[![Visual Studio Marketplace Version](https://img.shields.io/visual-studio-marketplace/v/remcohaszing.markdown-decorations)](https://marketplace.visualstudio.com/items?itemName=remcohaszing.markdown-decorations)
+[![Visual Studio Marketplace Downloads](https://img.shields.io/visual-studio-marketplace/d/remcohaszing.markdown-decorations)](https://marketplace.visualstudio.com/items?itemName=remcohaszing.markdown-decorations)
+[![Open VSX Version](https://img.shields.io/open-vsx/v/remcohaszing/markdown-decorations)](https://open-vsx.org/extension/remcohaszing/markdown-decorations)
+[![Open VSX Downloads](https://img.shields.io/open-vsx/dt/remcohaszing/markdown-decorations)](https://open-vsx.org/extension/remcohaszing/markdown-decorations)
 
 This Visual Studio Code extension provides a WYSIWYG-like experience for markdown and MDX files.
 This extension is experimental. Feedback is welcome, and changes are likely to happen.
@@ -22,7 +22,7 @@ In Visual Studio Code open the command palette using <kbd>Ctrl</kbd> + <kbd>Shif
 <kbd>P</kbd>, paste the following command, and press <kbd>Enter</kbd>.
 
 ```
-ext install remcohaszing.markdown-wysiwyg
+ext install remcohaszing.markdown-decorations
 ```
 
 ## Usage

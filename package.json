@@ -1,5 +1,5 @@
 {
-  "name": "markdown-wysiwyg",
+  "name": "markdown-decorations",
   "displayName": "Markdown WYSIWYG",
   "version": "0.0.0",
   "publisher": "remcohaszing",
@@ -11,15 +11,15 @@
   "keywords": [
     "json",
     "jsonschema",
-    "markdown-wysiwyg",
+    "markdown-decorations",
     "validation"
   ],
   "repository": {
     "type": "git",
-    "url": "https://github.com/remcohaszing/vscode-markdown-wysiwyg.git"
+    "url": "https://github.com/remcohaszing/vscode-markdown-decorations.git"
   },
-  "bugs": "https://github.com/remcohaszing/vscode-markdown-wysiwyg/issues",
-  "qna": "https://github.com/remcohaszing/vscode-markdown-wysiwyg/issues",
+  "bugs": "https://github.com/remcohaszing/vscode-markdown-decorations/issues",
+  "qna": "https://github.com/remcohaszing/vscode-markdown-decorations/issues",
   "engines": {
     "vscode": "^1.0.0"
   },
