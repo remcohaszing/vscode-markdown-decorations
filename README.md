@@ -14,6 +14,7 @@ This extension is experimental. Feedback is welcome, and changes are likely to h
 - [Installation](#installation)
 - [Usage](#usage)
 - [Features](#features)
+- [Sponsoring](#sponsoring)
 - [License](#license)
 
 ## Installation
@@ -43,13 +44,20 @@ The following decorations are supported:
 - Headers are bold.
 - Deleted text is strike-through.
 - Thematic breaks have an extended strike-through effect.
-- Inline code has a darker background in light mode, and a lighter background in dark mode.
+- Inline code and math have a darker background in light mode, and a lighter background in dark
+  mode.
 - HTML tags have a darker background in light mode, and a lighter background in dark mode.
-- Code blocks have a darker background in light mode, and a lighter background in dark mode.
+- Code and math blocks have a darker background in light mode, and a lighter background in dark
+  mode.
 - Frontmatter has a darker background in light mode, and a lighter background in dark mode.
 - Block quotes have a darker background in light mode, and a lighter background in dark mode. This
   effect increases as more block quotes are nested.
 - MDX expressions have a darker background in light mode, and a lighter background in dark mode.
+
+## Sponsoring
+
+If you like this project, consider sponsoring me via
+[GitHub Sponsors](https://github.com/sponsors/remcohaszing).
 
 ## License
 
