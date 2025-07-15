@@ -20,6 +20,18 @@ _This text_ is italic.
 
 This **line _contains ~~nested~~_ inline decorations**.
 
+$xasdasdasdasdasd\$
+
+> $$
+> L = \frac{1}{2} \rho v^2 S C_L
+> sdf
+> sfd
+> f
+> $$
+
+$2×x$
+
+
 ## HTML
 
 <kbd>Ctrl</kbd> + <kbd>Shift</kbd> + <kbd>P</kbd>

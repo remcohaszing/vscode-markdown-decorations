@@ -58,5 +58,9 @@
     "remark-preset-remcohaszing": "^3.0.0",
     "typescript": "^5.0.0",
     "unist-util-visit-parents": "^6.0.0"
+  },
+  "dependencies": {
+    "mdast-util-math": "^3.0.0",
+    "micromark-extension-math": "^3.0.0"
   }
 }

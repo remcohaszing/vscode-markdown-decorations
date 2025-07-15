@@ -3,9 +3,11 @@ import { type Node } from 'mdast'
 import { fromMarkdown, type Options as FromMarkdownOptions } from 'mdast-util-from-markdown'
 import { frontmatterFromMarkdown } from 'mdast-util-frontmatter'
 import { gfmFromMarkdown } from 'mdast-util-gfm'
+import { mathFromMarkdown } from 'mdast-util-math'
 import { mdxFromMarkdown } from 'mdast-util-mdx'
 import { frontmatter } from 'micromark-extension-frontmatter'
 import { gfm } from 'micromark-extension-gfm'
+import { math } from 'micromark-extension-math'
 import { mdxjs } from 'micromark-extension-mdxjs'
 import { visitParents } from 'unist-util-visit-parents'
 import {
@@ -34,14 +36,18 @@ declare module 'mdast' {
   }
 }
 
-const fromMarkdownOptions: FromMarkdownOptions = {
-  extensions: [frontmatter(['toml', 'yaml']), gfm()],
-  mdastExtensions: [frontmatterFromMarkdown(['toml', 'yaml']), gfmFromMarkdown()]
-}
+const fromMarkdownOptions = {
+  extensions: [frontmatter(['toml', 'yaml']), gfm(), math()],
+  mdastExtensions: [
+    frontmatterFromMarkdown(['toml', 'yaml']),
+    gfmFromMarkdown(),
+    mathFromMarkdown()
+  ]
+} satisfies FromMarkdownOptions
 
 const fromMdxOptions: FromMarkdownOptions = {
-  extensions: [frontmatter(['toml', 'yaml']), gfm(), mdxjs()],
-  mdastExtensions: [frontmatterFromMarkdown(['toml', 'yaml']), gfmFromMarkdown(), mdxFromMarkdown()]
+  extensions: [...fromMarkdownOptions.extensions, mdxjs()],
+  mdastExtensions: [...fromMarkdownOptions.mdastExtensions, mdxFromMarkdown()]
 }
 
 /**
@@ -146,10 +152,12 @@ export function activate(context: ExtensionContext): undefined {
       light: { backgroundColor: darken(0.05) }
     }),
     code: codeDecorationType,
+    math: codeDecorationType,
     delete: window.createTextEditorDecorationType({ textDecoration: 'line-through' }),
     emphasis: window.createTextEditorDecorationType({ fontStyle: 'italic' }),
     html: inlineCodeDecorationType,
     inlineCode: inlineCodeDecorationType,
+    inlineMath: inlineCodeDecorationType,
     mdxFlowExpression: inlineCodeDecorationType,
     mdxjsEsm: codeDecorationType,
     mdxJsxFlowElement: inlineCodeDecorationType,
@@ -216,6 +224,7 @@ export function activate(context: ExtensionContext): undefined {
           case 'delete':
           case 'html':
           case 'inlineCode':
+          case 'inlineMath':
           case 'emphasis':
           case 'mdxFlowExpression':
           case 'mdxjsEsm':
@@ -224,7 +233,8 @@ export function activate(context: ExtensionContext): undefined {
           case 'thematicBreak':
             addRanges(decorationRangeMap, node.type, getNodeRange(node))
             break
-          case 'code': {
+          case 'code':
+          case 'math': {
             const char = text.charAt(node.position!.start.offset!)
             addRanges(
               decorationRangeMap,
