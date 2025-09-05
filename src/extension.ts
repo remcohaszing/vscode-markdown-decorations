@@ -1,6 +1,9 @@
+import type { Node } from 'mdast'
+import type { Options as FromMarkdownOptions } from 'mdast-util-from-markdown'
+import type { ExtensionContext, TextDocument, TextEditor, TextEditorDecorationType } from 'vscode'
+
 import { characterEntities } from 'character-entities'
-import { type Node } from 'mdast'
-import { fromMarkdown, type Options as FromMarkdownOptions } from 'mdast-util-from-markdown'
+import { fromMarkdown } from 'mdast-util-from-markdown'
 import { frontmatterFromMarkdown } from 'mdast-util-frontmatter'
 import { gfmFromMarkdown } from 'mdast-util-gfm'
 import { mathFromMarkdown } from 'mdast-util-math'
@@ -10,15 +13,7 @@ import { gfm } from 'micromark-extension-gfm'
 import { math } from 'micromark-extension-math'
 import { mdxjs } from 'micromark-extension-mdxjs'
 import { visitParents } from 'unist-util-visit-parents'
-import {
-  type ExtensionContext,
-  Range,
-  type TextDocument,
-  type TextEditor,
-  type TextEditorDecorationType,
-  window,
-  workspace
-} from 'vscode'
+import { Range, window, workspace } from 'vscode'
 
 declare module 'mdast' {
   interface Toml extends Literal {
