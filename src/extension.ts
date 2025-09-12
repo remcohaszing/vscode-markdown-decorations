@@ -105,9 +105,9 @@ function brighten(alpha: number): string {
  * @param node
  *   The node to get the range for.
  * @param startOffset
- *   An additional offset to add to the start line number,
+ *   An additional offset to add to the start line number.
  * @param endOffset
- *   An additional offset to add to the end line number,
+ *   An additional offset to add to the end line number.
  * @returns
  *   The VSCode range that contains the node.
  */
