@@ -322,13 +322,7 @@ export function activate(context: ExtensionContext): undefined {
       }
     }),
 
-    {
-      dispose() {
-        for (const disposable of Object.values(decorationTypeMap)) {
-          disposable.dispose()
-        }
-      }
-    }
+    ...Object.values(decorationTypeMap)
   )
 
   updateAllEditors(window.visibleTextEditors)
