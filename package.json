@@ -38,13 +38,13 @@
     "vscode:prepublish": "npm run build -- --minify"
   },
   "devDependencies": {
-    "@remcohaszing/eslint": "^12.0.0",
+    "@remcohaszing/eslint": "^13.0.0",
     "@types/mdast": "^4.0.0",
-    "@types/node": "^24.0.0",
+    "@types/node": "^25.0.0",
     "@types/vscode": "^1.0.0",
     "@vscode/vsce": "^3.0.0",
     "character-entities": "^2.0.0",
-    "esbuild": "^0.25.0",
+    "esbuild": "^0.27.0",
     "mdast-util-from-markdown": "^2.0.0",
     "mdast-util-frontmatter": "^2.0.0",
     "mdast-util-gfm": "^3.0.0",
